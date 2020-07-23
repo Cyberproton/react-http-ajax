@@ -8,6 +8,7 @@ import './Blog.css';
 
 class Blog extends Component {
 
+    // Side-effects go here, this function does not trigger re-render
     componentDidMount() {
         Axios
             .get('https://jsonplaceholder.typicode.com/posts')
@@ -16,7 +17,7 @@ class Blog extends Component {
             });
     }
 
-    render () {
+    render() {
         return (
             <div>
                 <section className="Posts">
