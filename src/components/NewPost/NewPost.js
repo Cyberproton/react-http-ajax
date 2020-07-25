@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 import './NewPost.css';
 
 class NewPost extends Component {
+
     state = {
         title: '',
         content: '',
         author: 'Max'
-    }
+    };
 
     render () {
         return (
@@ -22,10 +24,21 @@ class NewPost extends Component {
                     <option value="Max">Cyberproton</option>
                     <option value="Manu">Hyperelectron</option>
                 </select>
-                <button>Add Post</button>
+                <button onClick={this.postCreatedHandler}>Add Post</button>
             </div>
         );
     }
+
+    postCreatedHandler = () => {
+        const post = { ...this.state };
+        Axios
+            .post('https://jsonplaceholder.typicode.com/posts', post)
+            .then(response => {
+                alert('Post created!');
+                console.log(response);
+            });
+    };
+
 }
 
 export default NewPost;

@@ -26,7 +26,7 @@ class FullPost extends Component {
             });
     }
 
-    render () {
+    render() {
         let post = null;
         if (this.state.loadedPost) {
             post = (
