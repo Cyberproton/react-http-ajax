@@ -57,6 +57,10 @@ class Blog extends Component {
         this.setState({ selectedPostId: postId });
     };
 
+    postDeletedHandler = () => {
+        this.setState({ selectedPostId: null })
+    };
+
 }
 
 export default Blog;
