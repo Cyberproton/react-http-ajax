@@ -15,7 +15,7 @@ class FullPost extends Component {
         if (!this.props.id) {
             return;
         }
-        // If the post has been loaded and the loaded post stay the same
+        // If the post has been loaded and the new selected post is the same as the current one
         if (this.state.loadedPost && this.state.loadedPost.id === this.props.id) {
             return;
         }
