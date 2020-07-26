@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Axios from 'axios';
+
+// Edit request config here
+Axios.interceptors.request.use(request => {
+  console.log(request);
+  return request;
+});
 
 ReactDOM.render(
   <React.StrictMode>
