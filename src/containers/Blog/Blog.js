@@ -25,6 +25,9 @@ class Blog extends Component {
                         author: 'Cyberproton'
                     }));
                 this.setState({ posts: posts });
+            })
+            .catch(error => {
+                console.log(error);
             });
     }
 
