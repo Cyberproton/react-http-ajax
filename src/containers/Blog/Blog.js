@@ -16,7 +16,7 @@ class Blog extends Component {
     // Side-effects go here, this function does not trigger re-render
     componentDidMount() {
         Axios
-            .get('https://jsonplaceholder.typicode.com/posts')
+            .get('/posts')
             .then(response => {
                 const posts = response.data
                     .slice(0, 4)

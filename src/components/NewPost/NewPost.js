@@ -32,7 +32,7 @@ class NewPost extends Component {
     postCreatedHandler = () => {
         const post = { ...this.state };
         Axios
-            .post('https://jsonplaceholder.typicode.com/posts', post)
+            .post('/posts', post)
             .then(response => {
                 alert('Post created!');
                 console.log(response);
